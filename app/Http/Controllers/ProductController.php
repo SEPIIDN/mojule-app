@@ -8,11 +8,14 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     //
-    function index(){
+    function index()
+    {
         return Product::all();
         return view('product', ['products' => data]);
     }
-    function detail($id){
-        return Product::find($id);
+    function detail($id)
+    {
+        $data = Product::find($id);
+        return view('detail', ['product' => $data]);
     }
 }
