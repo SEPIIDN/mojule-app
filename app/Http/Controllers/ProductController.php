@@ -8,6 +8,6 @@ class ProductController extends Controller
 {
     //
     function index(){
-        return "example";
+        return Product::all();
     }
 }
