@@ -10,5 +10,6 @@ class ProductController extends Controller
     //
     function index(){
         return Product::all();
+        return view('product', ['products' => data]);
     }
 }
