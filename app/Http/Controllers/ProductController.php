@@ -6,21 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+
 use Session;
 use Illuminate\Support\Facades\DB;
-
 class ProductController extends Controller
 {
     //
     function index()
     {
-        return Product::all();
-        return view('product', ['products' => data]);
+        $data= Product::all();
+
+       return view('product',['products'=>$data]);
     }
     function detail($id)
     {
-        $data = Product::find($id);
-        return view('detail', ['product' => $data]);
+        $data =Product::find($id);
+        return view('detail',['product'=>$data]);
     }
     function search(Request $req)
     {
@@ -53,10 +54,10 @@ class ProductController extends Controller
     function cartList()
     {
         $userId=Session::get('user')['id'];
-       $products= DB::table('cart')
-        ->join('products','cart.product_id','=','products.id')
-        ->where('cart.user_id',$userId)
-        ->select('products.*','cart.id as cart_id')
+       $products= DB::table('carts')
+        ->join('products','carts.product_id','=','products.id')
+        ->where('carts.user_id',$userId)
+        ->select('products.*','carts.id as cart_id')
         ->get();
 
         return view('cartlist',['products'=>$products]);
@@ -94,5 +95,15 @@ class ProductController extends Controller
          }
          $req->input();
          return redirect('/');
+    }
+    function myOrders()
+    {
+        $userId=Session::get('user')['id'];
+        $orders= DB::table('orders')
+         ->join('products','orders.product_id','=','products.id')
+         ->where('orders.user_id',$userId)
+         ->get();
+ 
+         return view('myorders',['orders'=>$orders]);
     }
 }
