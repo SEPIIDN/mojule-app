@@ -26,17 +26,18 @@
     {{ View::make('footer') }}
 </body>
 <style>
-    :root{
-   --main-color:#2980b9;
-   --orange:#f39c12;
-   --red:#e74c3c;
-   --black:#333;
-   --white:#fff;
-   --light-color:#666;
-   --light-bg:#eee;
-   --border:.2rem solid var(--black);
-   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-}
+    :root {
+        --main-color: #2980b9;
+        --orange: #f39c12;
+        --red: #e74c3c;
+        --black: #333;
+        --white: #fff;
+        --light-color: #666;
+        --light-bg: #eee;
+        --border: .2rem solid var(--black);
+        --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    }
+
     * {
         box-sizing: border-box;
         padding: 0;
@@ -63,7 +64,7 @@
     }
 
     img.slider-img {
-        height: 400px !important
+        height: 400px !important;
     }
 
     .custom-product {
@@ -75,15 +76,65 @@
     }
 
     .trending-image {
-        height: 100px;
+        height: 40vh;
     }
 
     .trending-item {
-        float: left;
-        width: 20%;
+        align-self: center;
+    }
+
+    .trending-text {
+        margin-inline-start: 2rem;
+    }
+
+    .mycontainer {
+        min-height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .box {
+        height: 350px;
+        width: 400px;
+        background-color: lightblue;
+        position: relative;
+        overflow: hidden
+    }
+
+    .box img {
+        width: 100%;
+        height: 100%
+    }
+
+    .content {
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        transition: all 0.7s;
+        opacity: 0.7
+    }
+
+    .box:hover .content {
+        top: 0;
+    }
+
+    .content p {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 17px 0px
     }
 
     .trending-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin: 30px;
     }
 
@@ -105,7 +156,8 @@
         margin-left: 5rem !important;
         margin-right: 6rem !important;
     }
-    .footer{
+
+    .footer {
         margin-top: 15rem;
     }
 </style>

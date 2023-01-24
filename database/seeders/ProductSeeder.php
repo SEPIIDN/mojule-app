@@ -17,32 +17,37 @@ class ProductSeeder extends Seeder
         //
         DB::table('products')->insert([
             [
-                'name'=>'Oppo mobile',
+                'name'=>'OnePlus Nord 2T 5G Dual SIM Jade Mist 128GB and 8GB RAM',
                 "price"=>"300",
-                "description"=>"A smartphone with 8gb ram and much more feature",
+                "description"=>"Dual SIM smartphone with 5G connectivity, 128GB of storage and 8GB of RAM, 6.43-inch AMOLED screen at 90Hz, rear cameras of 50+8+2MP and front camera of 32MP.",
                 "category"=>"mobile",
-                "gallery"=>"https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBOPPO-A52-6-GFUTU6297453D3D253C/1592019058170_0..png"
+                "gallery"=>"https://cdn.movertix.com/media/catalog/product/cache/image/1200x/o/n/oneplus-nord-2t-5g-dual-sim-jade-fog-128gb-and-8gb-ram-front.jpg"
             ],
             [
-                'name'=>'Panasonic Tv',
+                'name'=>'Panasonic TX-50JX600E',
                 "price"=>"400",
-                "description"=>"A smart tv with much more feature",
+                "description"=>"Treat yourself to high-quality, connected entertainment with the Pansonic TX-50JX600E. With a screen diagonal of 127 cm, this model offers a 4K HDR viewing experience with Smart TV and Dolby Atmos compatible stereo sound system.",
                 "category"=>"tv",
-                "gallery"=>"https://i.gadgets360cdn.com/products/televisions/large/1548154685_832_panasonic_32-inch-lcd-full-hd-tv-th-l32u20.jpg"
+                "gallery"=>"https://media.ldlc.com/r1600/ld/products/00/05/90/04/LD0005900421_1_0005922505.jpg"
             ],
             [
-                'name'=>'Soni Tv',
+                'name'=>'ASUS TUF GAMING F15',
                 "price"=>"500",
-                "description"=>"A tv with much more feature",
-                "category"=>"tv",
-                "gallery"=>"https://4.imimg.com/data4/PM/KH/MY-34794816/lcd-500x500.png"
+                "description"=>"Geared for serious gaming and real-world durability, the TUF Gaming F15 is a fully-loaded Windows 10 Pro gaming laptop that can carry you to victory.",
+                "category"=>"laptop",
+                "gallery"=>"https://www.asus.com/media/global/gallery/4nobskjpgxuxirct_setting_xxx_0_90_end_2000.png"
             ],
             [
-                'name'=>'LG fridge',
+                'name'=>'LG 215 L Single Door Refrigerator with Smart Inverter Compressor',
                 "price"=>"200",
-                "description"=>"A fridge with much more feature",
+                "description"=>"Smart Inverter Compressor
+                Smart Connect
+                MOIST ‘N’ FRESH
+                Toughened Glass Shelves
+                Stabilizer Free 90V ~ 310V
+                4 Star Rating",
                 "category"=>"fridge",
-                "gallery"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFx-2-wTOcfr5at01ojZWduXEm5cZ-sRYPJA&usqp=CAU"
+                "gallery"=>"https://www.lg.com/in/images/refrigerators/md06235496/gallery/GL-D221ABCY-Refrigerators-Front-View-D-01-VF.jpg"
              ]
         ]);
     }
