@@ -143,6 +143,9 @@
         justify-content: center;
         margin: 30px;
     }
+    .test{
+        margin: 30px;
+    }
 
     .detail-img {
         height: 200px;
