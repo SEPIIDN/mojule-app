@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    <form class="container col-sm-4 col-sm-offset-4" action="login" method="POST">
+    <form class="container col-sm-4 col-sm-offset-4 shadow" action="login" method="POST">
         <div class="mb-3">
             @csrf
             <label for="exampleInputEmail1" class="form-label">Email address</label>
