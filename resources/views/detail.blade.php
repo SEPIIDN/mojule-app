@@ -6,7 +6,9 @@
        <img class="detail-img" src="{{$product['gallery']}}" alt="">
        </div>
        <div class="col-sm-6">
-           <a href="/">Go Back</a>
+        <div class="btn btn-warning">
+            <span><i class="fa fa-caret-left text-white" aria-hidden="true"></i></span><a class="text-white" href="/">Go Back</a>
+        </div>
        <h2>{{$product['name']}}</h2>
        <h3>Price : {{$product['price']}}</h3>
        <h4>Details: {{$product['description']}}</h4>

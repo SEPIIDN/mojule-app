@@ -44,6 +44,12 @@
         margin: 0;
     }
 
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
     ::-webkit-scrollbar {
         height: .5rem;
         width: 1rem;
